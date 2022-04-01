@@ -49,7 +49,7 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Upload to S3
-          command: aws s3 cp function.zip s3://jukrin/function.zip
+          command: aws s3 cp function.zip s3://jukrinni/function.zip
       - run:
           name: Deploy new Lambda
           command: aws lambda update-function-code --function-name *** --s3-bucket jukrin --s3-key function.zip
